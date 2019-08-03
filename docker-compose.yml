@@ -1,0 +1,23 @@
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    restart: always
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - ./jenkins/jenkins_home:/var/jenkins_home
+  prometheus:
+    image: prom/prometheus:v2.11.1
+    container_name: prometheus
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+  grafana:
+    image: grafana/grafana:6.2.5
+    container_name: grafana
+    ports:
+      - 3000:3000

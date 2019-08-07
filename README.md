@@ -16,8 +16,14 @@ docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
 ## URL  
-```
+- Jenkins  
 http://localhost:8080  
+
+- prometheus  
 http://localhost:9090  
+
+- grafana  
 http://localhost:3000  
-```
+
+- redmine  
+http://localhost:3030  

@@ -1,4 +1,7 @@
 jenkins/jenkins_home
+redmine/plugins
+redmine/themes
+redmine/db
 
 !.gitkeep
 .DS_Store
